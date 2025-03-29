@@ -522,6 +522,7 @@ ul, .cta-buttons{
   border: none;
   cursor: pointer;
   transition: all 0.3s ease;
+  text-decoration: none;
 }
 
 .cta-btn:hover {
