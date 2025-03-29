@@ -1,19 +1,18 @@
-// ChatSection.jsx
 import { useState, useEffect } from 'react';
+import ReactMarkdown from 'react-markdown';
 
 const ChatSection = ({ summary }) => {
   const [messages, setMessages] = useState([]);
   const [input, setInput] = useState('');
   const [isLoading, setIsLoading] = useState(false);
 
-  // Initialize with a greeting message on page load
   useEffect(() => {
     const greetingMessage = {
       role: 'bot',
       content: 'Hello! How can I assist you with your health-related questions today?',
     };
     setMessages([greetingMessage]);
-  }, []); // Empty dependency array ensures this runs only on mount
+  }, []);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -56,7 +55,7 @@ const ChatSection = ({ summary }) => {
               key={index}
               className={`message ${msg.role === 'user' ? 'user' : 'bot'}`}
             >
-              {msg.content}
+              <ReactMarkdown>{msg.content}</ReactMarkdown>
             </div>
           ))}
           {isLoading && <div className="loading">Bot is typing...</div>}
@@ -75,8 +74,6 @@ const ChatSection = ({ summary }) => {
           </button>
         </form>
       </div>
-
-
     </div>
   );
 };
