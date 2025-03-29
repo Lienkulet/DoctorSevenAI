@@ -211,7 +211,8 @@
 .input {
   flex: 1;
   padding: 10px;
-  background-color: rgba(170, 170, 170, 0.1);;
+  color: #ccc;
+  background-color: rgba(170, 170, 170, 0.1);
   border: 1px solid #ddd;
   border-radius: 4px;
   outline: none;
