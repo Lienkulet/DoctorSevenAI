@@ -77,7 +77,7 @@ const ReportSection = ({ summary, setSummary }) => {
       <h2 className="sidebar-title">Medical Report Analysis</h2>
       <div className="file-form">
         {isSummarizing && (
-          <div className="absolute z-10 h-full w-full bg-gray-100/90 rounded-lg flex flex-row items-center justify-center">
+          <div className="absolute z-10 h-full w-full bg-gray-100/90 rounded-lg flex items-center justify-center">
             Summarizing...
           </div>
         )}
@@ -105,8 +105,8 @@ const ReportSection = ({ summary, setSummary }) => {
             value={summary}
             onChange={(e) => setSummary(e.target.value)}
             placeholder="Summary of the report will appear here..."
-            className="summary-text min-h-[200px] resize-none border-0 p-3 shadow-none focus:outline-none"
-          />
+            className='summary-text'
+            />
         ) : (
           <p className="summary-placeholder">Upload a report to see its summary.</p>
         )}

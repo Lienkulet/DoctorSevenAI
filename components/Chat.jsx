@@ -49,30 +49,34 @@ const ChatSection = ({ summary }) => {
   return (
     <div className="chat-container">
       <h1 className="title">Medical AI Assistant</h1>
-      <div className="chat-window">
-        {messages.map((msg, index) => (
-          <div
-            key={index}
-            className={`message ${msg.role === 'user' ? 'user' : 'bot'}`}
-          >
-            {msg.content}
-          </div>
-        ))}
-        {isLoading && <div className="loading">Bot is typing...</div>}
+      <div>
+        <div className="chat-window">
+          {messages.map((msg, index) => (
+            <div
+              key={index}
+              className={`message ${msg.role === 'user' ? 'user' : 'bot'}`}
+            >
+              {msg.content}
+            </div>
+          ))}
+          {isLoading && <div className="loading">Bot is typing...</div>}
+        </div>
+        <form onSubmit={handleSubmit} className="input-form">
+          <input
+            type="text"
+            value={input}
+            onChange={(e) => setInput(e.target.value)}
+            className="input"
+            placeholder="Ask a medical question..."
+            disabled={isLoading}
+          />
+          <button type="submit" className="button" disabled={isLoading}>
+            Send
+          </button>
+        </form>
       </div>
-      <form onSubmit={handleSubmit} className="input-form">
-        <input
-          type="text"
-          value={input}
-          onChange={(e) => setInput(e.target.value)}
-          className="input"
-          placeholder="Ask a medical question..."
-          disabled={isLoading}
-        />
-        <button type="submit" className="button" disabled={isLoading}>
-          Send
-        </button>
-      </form>
+
+
     </div>
   );
 };

@@ -1,5 +1,4 @@
 import React from 'react';
-import { FaFileAlt } from 'react-icons/fa'; 
 
 const FeatureCard = () => {
   return (
