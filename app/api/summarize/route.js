@@ -2,7 +2,7 @@ import OpenAI from "openai";
 
 const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
 
-const prompt = `Attached is a clinical report (image or PDF). 
+const prompt = `Attached is a clinical report (image or PDF). Study it. Retrieve information from the image. 
 Go over the clinical report and identify biomarkers that show slight or large abnormalities. Then summarize in 100 words. You may increase the word limit if the report has multiple pages. Do not output patient name, date, etc. Make sure to include numerical values and key details from the report, including report title.
 ## Summary: `;
 
