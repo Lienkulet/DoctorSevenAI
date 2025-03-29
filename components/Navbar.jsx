@@ -9,9 +9,9 @@ const Navbar = () => {
                 DoctorSeven</div>
             <ul className="nav">
                 <Link href="#" className="nav-link">Overview</Link>
-                <Link href="#" className="nav-link">Technology</Link>
-                <Link href="#" className="nav-link">Testimonials</Link>
-                <Link href="#" className="nav-link">Resources</Link>
+                <Link href="#feature" className="nav-link">Technology</Link>
+                <Link href="#prefooterCard" className="nav-link">Testimonials</Link>
+                <Link href="#prefooterCard" className="nav-link">Resources</Link>
             </ul>
             <div className="cta-buttons">
                 <Link href="#" className="nav-link login">Login</Link>

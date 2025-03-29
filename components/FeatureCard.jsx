@@ -1,14 +1,13 @@
 import React from 'react';
 
-const FeatureCard = () => {
+const FeatureCard = ({title, desc}) => {
   return (
     <div className='card'>
       <img src='/img2.png' width={400} height={200}/>
       <div className='content'>
-        <h3 className='title'>Medical Report Summarizer</h3>
+        <h3 className='title'>{title}</h3>
         <p className='description'>
-          Summarize your medical report and use it to help in getting better health tips.
-        </p>
+{desc}        </p>
       </div>
     </div>
   );

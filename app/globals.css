@@ -542,6 +542,9 @@ ul, .cta-buttons{
 .prefooterCard-image {
   flex: 1;
   background-color: #e0e0e0;
+  background-image: url('/img2.png');
+  background-size: cover;
+  background-repeat: no-repeat;
   border-radius: 10px;
   height: 300px; /* Adjust based on your needs */
 }

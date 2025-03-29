@@ -3,7 +3,7 @@ import { FaArrowRight } from 'react-icons/fa'; // Import the right arrow icon
 
 const Prefooter = () => {
   return (
-    <div className="prefooterCard">
+    <div id='prefooterCard' className="prefooterCard">
       <div className="prefooterCard-text">
         <h1 className="title">Ready to Streamline Your Workflow</h1>
         <p className="description">
